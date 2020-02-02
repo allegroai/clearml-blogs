@@ -1,0 +1,35 @@
+voco_categories = [
+    "airplane",
+    "bicycle",
+    "bird",
+    "boat",
+    "bottle",
+    "bus",
+    "car",
+    "cat",
+    "chair",
+    "cow",
+    "dining table",
+    "dog",
+    "horse",
+    "motorcycle",
+    "person",
+    "potted plant",
+    "sheep",
+    "couch",
+    "train",
+    "tv",
+]
+
+bdd_things_categories = [
+    "bike",
+    "bus",
+    "car",
+    "motor",
+    "person",
+    "traffic light",
+    "traffic sign",
+    "train",
+    "truck",
+    "rider"
+]
