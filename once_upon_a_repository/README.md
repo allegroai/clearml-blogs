@@ -1,5 +1,5 @@
 # The Hero’s Journey to Deep Learning CodeBase
-## [Blog 1: Once Upon a Repository: How to Write a Readable and Maintainable PyTorch Codebase](https://allegro.ai/blog/)
+## [Blog I: Once Upon a Repository: How to Write Readable, Maintainable Code with PyTorch](https://medium.com/@dan_41998/once-upon-a-repository-how-to-write-readable-maintainable-code-with-pytorch-951f03f6a829)
 
 We all aim to write a maintainable and modular codebase that supports the R&D process from research to production. Key to an efficient and successful deep learning project, this is not an easy feat. That is why we decided to write this blog series -- to share our experience from numerous deep learning projects and demonstrate the way to achieve this goal using open source tools.
 
