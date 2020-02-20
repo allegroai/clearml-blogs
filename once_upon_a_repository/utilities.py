@@ -1,14 +1,20 @@
-import cv2
-import numpy as np
-import attr
 import json
 
+import attr
+import cv2
+import numpy as np
 import torch
-
 import torchvision
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 from torchvision.models.detection.mask_rcnn import MaskRCNNPredictor
 from torchvision.transforms import functional as F
+
+from torchvision_references import utils
+
+
+def safe_collate(batch):
+    batch = list(filter(lambda x: x is not None, batch))
+    return utils.collate_fn(batch)
 
 
 def draw_boxes(im, boxes, labels, color=(150, 0, 0)):
