@@ -8,7 +8,7 @@ The list of blogs includes:
 * The Hero's Journey to Deep Learning CodeBase
     * [Blog I: Once Upon a Repository: How to Write Readable, Maintainable Code with PyTorch](once_upon_a_repository/)
     * Blog IIA: The Battle between Speed & Accuracy: Single-Shot vs Two-Shot Detection
-    * Blog IIB: A Tale of Two Models: Build Your Own SSD  
+    * [Blog IIB: The Hero Rises: Build Your Own SSD](the_hero_rises/)
     * Blog III: Flying with Anchors: Optimize SSD to Your Data
     * Blog IV: Happily Ever Deployed: ...
 
