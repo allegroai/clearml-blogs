@@ -1,7 +1,7 @@
 Pillow == 8.3.2
 attrs == 19.3.0
 numpy == 1.17.4
-opencv_python == 4.1.2.30
+opencv_python == 4.2.0.32
 pathlib2 == 2.3.5
 pycocotools == 2.0.0
 pytorch_ignite == 0.2.1
