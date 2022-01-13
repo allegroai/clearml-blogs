@@ -1,6 +1,6 @@
 Pillow == 9.0.0
 attrs == 19.3.0
-numpy == 1.17.4
+numpy == 1.21.0
 opencv_python == 4.2.0.32
 pathlib2 == 2.3.5
 pycocotools == 2.0.0
