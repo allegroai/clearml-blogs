@@ -1,0 +1,9 @@
+clearml>=1.3.0
+torchaudio>=0.10.2
+torch>=1.10.2
+pandas>=1.3
+torchvision
+matplotlib
+tqdm
+sklearn
+tensorboard

@@ -1,0 +1,4 @@
+tensorboard_logs
+.venv
+dataset
+.idea
