@@ -1,6 +1,7 @@
 import PIL
 import io
 import os
+from tempfile import gettempdir
 import matplotlib.pyplot as plt
 from torchvision import models
 from sklearn.metrics import ConfusionMatrixDisplay, f1_score
@@ -161,3 +162,6 @@ for epoch in range(configuration_dict.get('number_of_epochs', 10)):
     train(model, epoch)
     test_model(model, epoch)
     scheduler.step()
+
+# save model
+torch.save(model, os.path.join(gettempdir(), "urbansounds_model.pt"))
