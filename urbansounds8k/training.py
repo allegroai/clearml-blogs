@@ -13,18 +13,28 @@ from torch.utils.data import Dataset
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
 import numpy as np
+from argparse import ArgumentParser
 
 from clearml import Task, Dataset
 task = Task.init(project_name='ClearML examples/Urbansounds',
                  task_name='training')
 
+
+parser = ArgumentParser()
+parser.add_argument('--dropout', type=float, default=0.30)
+parser.add_argument('--base_lr', type=float, default=0.002)
+parser.add_argument('--number_of_epochs', type=int, default=10)
+parser.add_argument('--batch_size', type=int, default=4)
+
+args = parser.parse_args()
+
+
 configuration_dict = {
-    'dropout': 0.30,
-    'base_lr': 0.002,
-    'number_of_epochs': 10,
-    'batch_size': 4
+    'dropout': args.dropout,
+    'base_lr': args.base_lr,
+    'number_of_epochs': args.number_of_epochs,
+    'batch_size': args.batch_size
 }
-task.connect(configuration_dict)
 
 
 class ClearMLDataLoader(Dataset):
