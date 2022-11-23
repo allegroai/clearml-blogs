@@ -9,14 +9,14 @@ from torchvision.transforms import ToTensor
 import torchaudio
 import torch
 import torch.optim as optim
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset as TorchDataset
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 from argparse import ArgumentParser
 
 from clearml import Task, Dataset
-task = Task.init(project_name='ClearML examples/Urbansounds',
+task = Task.init(project_name='examples/Urbansounds',
                  task_name='training')
 
 
@@ -37,9 +37,14 @@ configuration_dict = {
 }
 
 
-class ClearMLDataLoader(Dataset):
+class ClearMLDataLoader(TorchDataset):
     def __init__(self, dataset_name, project_name, folder_filter):
-        clearml_dataset = Dataset.get(dataset_name=dataset_name, dataset_project=project_name, dataset_tags=["preprocessed"])
+        clearml_dataset = Dataset.get(
+            dataset_name=dataset_name,
+            dataset_project=project_name,
+            dataset_tags=["preprocessed"],
+            alias='Preprocessed Dataset'
+        )
         self.img_dir = clearml_dataset.get_local_copy()
         self.img_metadata = Task.get_task(task_id=clearml_dataset.id).artifacts['metadata'].get()
         self.img_metadata = self.img_metadata[self.img_metadata['fold'].isin(folder_filter)]
@@ -59,8 +64,8 @@ class ClearMLDataLoader(Dataset):
         return sound_path, image, label
 
 
-train_dataset = ClearMLDataLoader('UrbanSounds example', 'ClearML examples/Urbansounds', set(range(1, 10)))
-test_dataset = ClearMLDataLoader('UrbanSounds example', 'ClearML examples/Urbansounds', {10})
+train_dataset = ClearMLDataLoader('UrbanSounds example', 'examples/Urbansounds', set(range(1, 10)))
+test_dataset = ClearMLDataLoader('UrbanSounds example', 'examples/Urbansounds', {10})
 print(len(train_dataset), len(test_dataset))
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=configuration_dict.get('batch_size', 4),
                                            shuffle=True, pin_memory=True, num_workers=1)
