@@ -80,7 +80,7 @@ class DataSetBuilder:
         dataset_task.get_logger().report_histogram(
             title='Class distribution',
             series='Class distribution',
-            values=self.metadata['class'],
+            values=self.metadata['label'],
             iteration=0,
             xaxis='X axis label',
             yaxis='Y axis label'
@@ -136,7 +136,7 @@ class DataSetBuilder:
         dataset_task.upload_artifact(name='metadata', artifact_object=self.metadata)
         dataset.finalize(auto_upload=True)
         dataset_task.flush(wait_for_uploads=True)
-
+        self.log_dataset_statistics(dataset_task)
 
 if __name__ == '__main__':
     datasetbuilder = DataSetBuilder()
