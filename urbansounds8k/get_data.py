@@ -9,7 +9,7 @@ configuration = {
     'selected_classes': ['air_conditioner', 'car_horn', 'children_playing', 'dog_bark', 'drilling',
                          'engine_idling', 'gun_shot', 'jackhammer', 'siren', 'street_music']
 }
-task.connect(task)
+task.connect(configuration)
 
 
 def get_urbansound8k():
