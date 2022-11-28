@@ -22,7 +22,7 @@ The data itself is organized into multiple folds, or equal splits of the data. I
 ## ClearML Workflow
 
 
-![ClearML flow diagram](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cabf333f-1b2e-40a6-ae89-b64599fc8acb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220323%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220323T095145Z&X-Amz-Expires=86400&X-Amz-Signature=1dab04b70935a255c26fbcf6e120ae4619130411adfeefd4e977debcfc0ff03c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![ClearML flow diagram](assets/diagram.png)
 
 
 ### Getting the data
