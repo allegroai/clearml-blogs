@@ -1,0 +1,162 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 1,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "cards": {},
+        "color": {
+          "cardColor": "#b4ff00",
+          "colorScale": "sqrt",
+          "colorScheme": "interpolateSpectral",
+          "exponent": 0.5,
+          "mode": "spectrum"
+        },
+        "dataFormat": "tsbuckets",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
+        "description": "",
+        "gridPos": {
+          "h": 12,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "heatmap": {},
+        "hideZeroBuckets": false,
+        "highlightCards": true,
+        "id": 2,
+        "legend": {
+          "show": false
+        },
+        "reverseYBuckets": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "PBFA97CFB590B2093"
+            },
+            "exemplar": true,
+            "expr": "100 * increase(asteroid:Minimum_Orbit_Intersection_bucket{}[1m]) / increase(asteroid:Minimum_Orbit_Intersection_sum{}[1m])",
+            "interval": "",
+            "legendFormat": "{{le}}",
+            "refId": "A"
+          }
+        ],
+        "title": "Minimum Orbit Intersection Distribution",
+        "tooltip": {
+          "show": true,
+          "showHistogram": false
+        },
+        "type": "heatmap",
+        "xAxis": {
+          "show": true
+        },
+        "yAxis": {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        },
+        "yBucketBound": "auto"
+      },
+      {
+        "cards": {},
+        "color": {
+          "cardColor": "#b4ff00",
+          "colorScale": "sqrt",
+          "colorScheme": "interpolateSpectral",
+          "exponent": 0.5,
+          "mode": "spectrum"
+        },
+        "dataFormat": "tsbuckets",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
+        "gridPos": {
+          "h": 12,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "heatmap": {},
+        "hideZeroBuckets": false,
+        "highlightCards": true,
+        "id": 4,
+        "legend": {
+          "show": false
+        },
+        "reverseYBuckets": false,
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "PBFA97CFB590B2093"
+            },
+            "exemplar": true,
+            "expr": "100 * increase(asteroid:Absolute_Magnitude_bucket{}[1m]) / increase(asteroid:Absolute_Magnitude_sum{}[1m])",
+            "format": "time_series",
+            "interval": "",
+            "legendFormat": "{{le}}",
+            "refId": "A"
+          }
+        ],
+        "title": "Absolute Magnitude Distribution",
+        "tooltip": {
+          "show": true,
+          "showHistogram": false
+        },
+        "type": "heatmap",
+        "xAxis": {
+          "show": true
+        },
+        "yAxis": {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        },
+        "yBucketBound": "auto"
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 35,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-3h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Asteroid Dashboard",
+    "uid": "axuPWb9nz",
+    "version": 4,
+    "weekStart": ""
+  }
