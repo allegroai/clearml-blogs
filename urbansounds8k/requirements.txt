@@ -5,5 +5,5 @@ pandas>=1.3
 torchvision
 matplotlib
 tqdm
-sklearn
+scikit-learn
 tensorboard
